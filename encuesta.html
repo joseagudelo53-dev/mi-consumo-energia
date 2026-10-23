@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta de hábitos de energía</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body class="container py-3">
+    <header class="p-4 mb-4 bg-primary text-white rounded">
+      <h1>Encuesta de hábitos de energía</h1>
+      <p>Ayúdanos a entender mejor los hábitos de consumo de energía de tu familia.</p>
+      <nav class="nav nav-pills">
+        <a class="nav-link text-white" href="index.html">Inicio</a>
+        <a class="nav-link text-white" href="equipos.html">Mis equipos</a>
+        <a class="nav-link text-white" href="mi-factura.html">Mi factura</a>
+        <a class="nav-link text-white" href="encuesta.html">Encuesta de hábitos</a>
+        <a class="nav-link text-white" href="registro.html">Registrar equipo</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="alert alert-info" role="alert">
+          <strong>Instrucciones:</strong> Esta encuesta ayuda a comprender los hábitos de consumo de energía
+          de tu familia. Todos los campos marcados con <span class="text-danger">*</span> son obligatorios.
+        </div>
+
+        <form action="encuesta.html" method="get" class="needs-validation">
+          <!-- Fieldset 1: Información personal -->
+          <fieldset class="border rounded p-3 mb-4">
+            <legend class="fs-5 fw-bold mb-3">Información personal</legend>
+
+            <div class="mb-3">
+              <label for="nombre" class="form-label">
+                Nombre completo <span class="text-danger">*</span>
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                name="nombre"
+                placeholder="Ej.: Juan García López"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">
+                Correo electrónico <span class="text-danger">*</span>
+              </label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Ej.: juan@example.com"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="personas" class="form-label">
+                ¿Cuántas personas viven en tu casa? <span class="text-danger">*</span>
+              </label>
+              <input
+                type="number"
+                class="form-control"
+                id="personas"
+                name="personas"
+                min="1"
+                max="20"
+                placeholder="Ej.: 4"
+                required
+              />
+            </div>
+          </fieldset>
+
+          <!-- Fieldset 2: Hábitos de consumo -->
+          <fieldset class="border rounded p-3 mb-4">
+            <legend class="fs-5 fw-bold mb-3">Hábitos de consumo de energía</legend>
+
+            <div class="mb-3">
+              <label for="tiempo-ducha" class="form-label">
+                ¿Cuánto tiempo promedio se demora en la ducha eléctrica? (minutos) <span class="text-danger">*</span>
+              </label>
+              <input
+                type="range"
+                class="form-range"
+                id="tiempo-ducha"
+                name="tiempo-ducha"
+                min="1"
+                max="30"
+                value="10"
+                required
+              />
+              <small class="text-muted">Valor seleccionado: <span id="valor-ducha">10</span> minutos</small>
+            </div>
+
+            <div class="mb-3">
+              <label for="frecuencia-lavadora" class="form-label">
+                ¿Con qué frecuencia usas la lavadora? <span class="text-danger">*</span>
+              </label>
+              <select class="form-select" id="frecuencia-lavadora" name="frecuencia-lavadora" required>
+                <option value="" selected disabled>-- Selecciona una opción --</option>
+                <option value="diaria">Una vez al día</option>
+                <option value="tres-veces">Tres veces por semana</option>
+                <option value="dos-veces">Dos veces por semana</option>
+                <option value="una-vez">Una vez por semana</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">
+                ¿Cuándo es el mejor momento para que uses energía en tu casa? <span class="text-danger">*</span>
+              </label>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  id="momento-dia"
+                  name="mejor-momento"
+                  value="dia"
+                  required
+                />
+                <label class="form-check-label" for="momento-dia">
+                  De día (las tarifas son más baratas)
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  id="momento-noche"
+                  name="mejor-momento"
+                  value="noche"
+                />
+                <label class="form-check-label" for="momento-noche">
+                  De noche (6 a 9 pm, la hora pico)
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  id="momento-madrugada"
+                  name="mejor-momento"
+                  value="madrugada"
+                />
+                <label class="form-check-label" for="momento-madrugada">
+                  De madrugada (después de las 9 pm)
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">
+                ¿Qué acciones realizas para ahorrar energía? (Selecciona todas las que apliquen)
+              </label>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="ahorro-apagar"
+                  name="acciones-ahorro"
+                  value="apagar-luces"
+                />
+                <label class="form-check-label" for="ahorro-apagar">
+                  Apago las luces cuando salgo de una habitación
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="ahorro-desconectar"
+                  name="acciones-ahorro"
+                  value="desconectar"
+                />
+                <label class="form-check-label" for="ahorro-desconectar">
+                  Desconecto los aparatos cuando no los uso
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="ahorro-led"
+                  name="acciones-ahorro"
+                  value="bombillas-led"
+                />
+                <label class="form-check-label" for="ahorro-led">
+                  Uso bombillas LED
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="ahorro-ducha"
+                  name="acciones-ahorro"
+                  value="ducha-corta"
+                />
+                <label class="form-check-label" for="ahorro-ducha">
+                  Tomo duchas cortas (menos de 5 minutos)
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="ahorro-lavadora"
+                  name="acciones-ahorro"
+                  value="lavadora-llena"
+                />
+                <label class="form-check-label" for="ahorro-lavadora">
+                  Uso la lavadora con cargas completas
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="ahorro-termostato"
+                  name="acciones-ahorro"
+                  value="termostato"
+                />
+                <label class="form-check-label" for="ahorro-termostato">
+                  Controlo la temperatura del termostato
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Fieldset 3: Disposición a ahorrar -->
+          <fieldset class="border rounded p-3 mb-4">
+            <legend class="fs-5 fw-bold mb-3">Disposición a mejorar</legend>
+
+            <div class="mb-3">
+              <label for="presupuesto" class="form-label">
+                ¿Cuánto dinero estás dispuesto a invertir en mejoras para ahorrar energía? (COP)
+              </label>
+              <input
+                type="number"
+                class="form-control"
+                id="presupuesto"
+                name="presupuesto"
+                min="0"
+                max="5000000"
+                placeholder="Ej.: 500000"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="observaciones" class="form-label">
+                ¿Tienes algún comentario o sugerencia adicional sobre tus hábitos de consumo de energía?
+              </label>
+              <textarea
+                class="form-control"
+                id="observaciones"
+                name="observaciones"
+                rows="4"
+                placeholder="Comparte tus preocupaciones, ideas o experiencias con el consumo de energía en tu casa..."
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <!-- Botones -->
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="reset" class="btn btn-secondary btn-lg">Limpiar formulario</button>
+            <button type="submit" class="btn btn-primary btn-lg">Enviar encuesta</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="mt-5">
+        <h2>¿Por qué esta encuesta?</h2>
+        <p>
+          Entender los hábitos de consumo de energía de las familias es fundamental para identificar
+          oportunidades de ahorro. Con tus respuestas, podemos:
+        </p>
+        <ul>
+          <li>Identificar los momentos del día en que más energía consumes.</li>
+          <li>Reconocer patrones de consumo que afectan tu factura.</li>
+          <li>Proponer recomendaciones personalizadas de ahorro.</li>
+          <li>Entender la percepción de las familias sobre el consumo de energía en El Niño 2026.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="mt-5 pt-3 border-top text-muted">
+      <p>Ingeniería Web I · IU Digital de Antioquia · 2026-2</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Script para actualizar el valor del range en tiempo real
+      const rangeInput = document.getElementById('tiempo-ducha');
+      const rangeValue = document.getElementById('valor-ducha');
+
+      rangeInput.addEventListener('input', function() {
+        rangeValue.textContent = this.value;
+      });
+    </script>
+  </body>
+</html>

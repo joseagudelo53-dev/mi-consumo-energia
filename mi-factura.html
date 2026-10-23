@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi factura de energía</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body class="container py-3">
+    <header class="p-4 mb-4 bg-primary text-white rounded">
+      <h1>Mi factura de energía</h1>
+      <p>Análisis de mi factura mensual y comparación con datos de consumo.</p>
+      <nav class="nav nav-pills">
+        <a class="nav-link text-white" href="index.html">Inicio</a>
+        <a class="nav-link text-white" href="equipos.html">Mis equipos</a>
+        <a class="nav-link text-white" href="mi-factura.html">Mi factura</a>
+        <a class="nav-link text-white" href="encuesta.html">Encuesta de hábitos</a>
+        <a class="nav-link text-white" href="registro.html">Registrar equipo</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Copia de mi factura</h2>
+        <p>A continuación se muestra la imagen de mi factura con datos sensibles tapados:</p>
+
+        <figure class="figure">
+          <img
+            src="img/Factura_energia.jpeg"
+            alt="Foto de la factura de energía de octubre 2026 mostrando consumo de 108 kWh"
+            class="figure-img img-fluid border rounded"
+            style="max-width: 100%; height: auto;"
+          />
+          <figcaption class="figure-caption">Factura de energía - Octubre 2026</figcaption>
+        </figure>
+      </section>
+
+      <section class="mt-5">
+        <h2>Historial de consumo (últimos 6 meses)</h2>
+        <p>Datos del historial que aparece en la factura:</p>
+
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <caption>
+              Historial de consumo de energía de los últimos 6 meses
+            </caption>
+            <thead class="table-dark">
+              <tr>
+                <th>Mes</th>
+                <th>kWh consumidos</th>
+                <th>Valor pagado (COP)</th>
+                <th>Tarifa promedio (COP/kWh)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Abril 2026</td>
+                <td>115</td>
+                <td>$30,980</td>
+                <td>269</td>
+              </tr>
+              <tr>
+                <td>Mayo 2026</td>
+                <td>125</td>
+                <td>$63,250</td>
+                <td>506</td>
+              </tr>
+              <tr>
+                <td>Junio 2026</td>
+                <td>118</td>
+                <td>$64,428</td>
+                <td>546</td>
+              </tr>
+              <tr class="table-warning">
+                <td>Julio 2026</td>
+                <td>132</td>
+                <td>$104,280</td>
+                <td>790</td>
+              </tr>
+              <tr class="table-danger">
+                <td>Agosto 2026</td>
+                <td>128</td>
+                <td>$120,576</td>
+                <td>942</td>
+              </tr>
+              <tr class="table-info">
+                <td>Octubre 2026</td>
+                <td>108</td>
+                <td>$88,159</td>
+                <td>817</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mt-5">
+        <h2>Comparación: Proyección vs Factura Real</h2>
+
+        <div class="alert alert-success" role="alert">
+          <strong>Hallazgo importante:</strong> Mis equipos proyectados consumen 810.78 kWh mensuales,
+          pero mi factura de octubre 2026 muestra un consumo real de 108 kWh.
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead class="table-dark">
+              <tr>
+                <th>Concepto</th>
+                <th>Valor</th>
+                <th>Observación</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Consumo proyectado (4 equipos)</strong></td>
+                <td>810.78 kWh/mes</td>
+                <td>Basado en equipos analizados en equipos.html</td>
+              </tr>
+              <tr>
+                <td><strong>Consumo real (Octubre 2026)</strong></td>
+                <td>108 kWh/mes</td>
+                <td>Según factura de energía actual</td>
+              </tr>
+              <tr class="table-danger">
+                <td><strong>Diferencia</strong></td>
+                <td>-702.78 kWh/mes (-86.7%)</td>
+                <td>La proyección es mucho mayor al consumo real</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="mt-4">¿Por qué la diferencia es tan grande?</h3>
+        <p>
+          El consumo real es <strong>86.7% menor</strong> que mi proyección. Esto se debe a:
+        </p>
+        <ul>
+          <li><strong>Horas de uso calculadas incorrectamente:</strong> Los equipos no se usan durante todas las horas que asumí.</li>
+          <li><strong>La nevera consume mucho menos:</strong> Solo 42.21 kWh/mes según su etiqueta, no las 187.56 kWh/semana calculadas (sería 750 kWh/mes).</li>
+          <li><strong>Equipos de uso ocasional:</strong> Licuadora, batidora y olla arrocera se usan minutos al día, no horas.</li>
+          <li><strong>Potencia nominal vs real:</strong> Los aparatos raramente funcionan a potencia máxima sostenida.</li>
+          <li><strong>Consumo de otros aparatos:</strong> El consumo real incluye TV, computador, iluminación, etc., pero es menor al proyectado.</li>
+          <li><strong>El consumo real de 108 kWh es muy bajo:</strong> Podría indicar que hay equipos que usan menos de lo esperado o no se usan frecuentemente.</li>
+        </ul>
+      </section>
+
+      <section class="mt-5">
+        <h2>Recomendaciones de ahorro para mi familia</h2>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="card border-success">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <span class="badge bg-success">1</span> Monitorear consumo fantasma
+                </h5>
+                <p class="card-text">
+                  Tu consumo de 108 kWh es bajo, lo que es positivo. Mantén desconectados cargadores, televisores y computadores cuando no los uses.
+                  Ahorraría aproximadamente 5-10 kWh mensuales, equivalentes a <strong>$4,085 - $8,170</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="card border-success">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <span class="badge bg-success">2</span> Optimizar uso de la nevera
+                </h5>
+                <p class="card-text">
+                  Tu nevera consume 42.21 kWh/mes. Mantenerla a temperatura adecuada (3-5°C), no abrir innecesariamente.
+                  Podría ahorrar 3-5 kWh mensuales, equivalentes a <strong>$2,451 - $4,085</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="card border-success">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <span class="badge bg-success">3</span> Usar iluminación LED
+                </h5>
+                <p class="card-text">
+                  Reemplazar todas las bombillas por LED. Esto reduce el consumo de iluminación en 75%,
+                  ahorrando aproximadamente 5-8 kWh mensuales, equivalentes a <strong>$4,085 - $6,536</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="card border-info">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <span class="badge bg-info">4</span> Usar equipos eficientemente
+                </h5>
+                <p class="card-text">
+                  Licuadora, batidora y olla arrocera son potentes pero se usan poco. Seguir con el uso responsable.
+                  Ahorraría aproximadamente 2-3 kWh mensuales, equivalentes a <strong>$1,634 - $2,451</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert alert-info mt-4">
+          <strong>Potencial de ahorro total:</strong> Aplicando estas recomendaciones, podrías ahorrar entre
+          <strong>15 y 26 kWh mensuales</strong>, lo que equivale a entre <strong>$12,255 y $21,242</strong>
+          mensuales con la tarifa promedio de 817 COP/kWh de octubre 2026.
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-5 pt-3 border-top text-muted">
+      <p>Ingeniería Web I · IU Digital de Antioquia · 2026-2</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
