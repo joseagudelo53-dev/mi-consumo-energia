@@ -12,21 +12,28 @@
   <body class="container py-3">
     <header class="p-4 mb-4 bg-primary text-white rounded">
       <h1>Encuesta de hábitos de energía</h1>
-      <p>Ayúdanos a entender mejor los hábitos de consumo de energía de tu familia.</p>
+      <p>
+        Ayúdanos a entender mejor los hábitos de consumo de energía de tu
+        familia.
+      </p>
       <nav class="nav nav-pills">
         <a class="nav-link text-white" href="index.html">Inicio</a>
         <a class="nav-link text-white" href="equipos.html">Mis equipos</a>
         <a class="nav-link text-white" href="mi-factura.html">Mi factura</a>
-        <a class="nav-link text-white" href="encuesta.html">Encuesta de hábitos</a>
+        <a class="nav-link text-white" href="encuesta.html"
+          >Encuesta de hábitos</a
+        >
         <a class="nav-link text-white" href="registro.html">Registrar equipo</a>
       </nav>
     </header>
 
     <main>
       <section>
+        <h2>Completa la encuesta</h2>
         <div class="alert alert-info" role="alert">
-          <strong>Instrucciones:</strong> Esta encuesta ayuda a comprender los hábitos de consumo de energía
-          de tu familia. Todos los campos marcados con <span class="text-danger">*</span> son obligatorios.
+          <strong>Instrucciones:</strong> Esta encuesta ayuda a comprender los
+          hábitos de consumo de energía de tu familia. Todos los campos marcados
+          con <span class="text-danger">*</span> son obligatorios.
         </div>
 
         <form action="encuesta.html" method="get" class="needs-validation">
@@ -64,7 +71,8 @@
 
             <div class="mb-3">
               <label for="personas" class="form-label">
-                ¿Cuántas personas viven en tu casa? <span class="text-danger">*</span>
+                ¿Cuántas personas viven en tu casa?
+                <span class="text-danger">*</span>
               </label>
               <input
                 type="number"
@@ -81,11 +89,14 @@
 
           <!-- Fieldset 2: Hábitos de consumo -->
           <fieldset class="border rounded p-3 mb-4">
-            <legend class="fs-5 fw-bold mb-3">Hábitos de consumo de energía</legend>
+            <legend class="fs-5 fw-bold mb-3">
+              Hábitos de consumo de energía
+            </legend>
 
             <div class="mb-3">
               <label for="tiempo-ducha" class="form-label">
-                ¿Cuánto tiempo promedio se demora en la ducha eléctrica? (minutos) <span class="text-danger">*</span>
+                ¿Cuánto tiempo promedio se demora en la ducha eléctrica?
+                (minutos) <span class="text-danger">*</span>
               </label>
               <input
                 type="range"
@@ -96,15 +107,26 @@
                 max="30"
                 value="10"
               />
-              <small class="text-muted">Valor seleccionado: <span id="valor-ducha">10</span> minutos</small>
+              <small class="text-muted"
+                >Valor seleccionado:
+                <span id="valor-ducha">10</span> minutos</small
+              >
             </div>
 
             <div class="mb-3">
               <label for="frecuencia-lavadora" class="form-label">
-                ¿Con qué frecuencia usas la lavadora? <span class="text-danger">*</span>
+                ¿Con qué frecuencia usas la lavadora?
+                <span class="text-danger">*</span>
               </label>
-              <select class="form-select" id="frecuencia-lavadora" name="frecuencia-lavadora" required>
-                <option value="" selected disabled>-- Selecciona una opción --</option>
+              <select
+                class="form-select"
+                id="frecuencia-lavadora"
+                name="frecuencia-lavadora"
+                required
+              >
+                <option value="" selected disabled>
+                  -- Selecciona una opción --
+                </option>
                 <option value="diaria">Una vez al día</option>
                 <option value="tres-veces">Tres veces por semana</option>
                 <option value="dos-veces">Dos veces por semana</option>
@@ -114,7 +136,8 @@
 
             <div class="mb-3">
               <label class="form-label">
-                ¿Cuándo es el mejor momento para que uses energía en tu casa? <span class="text-danger">*</span>
+                ¿Cuándo es el mejor momento para que uses energía en tu casa?
+                <span class="text-danger">*</span>
               </label>
               <div class="form-check">
                 <input
@@ -157,7 +180,8 @@
 
             <div class="mb-3">
               <label class="form-label">
-                ¿Qué acciones realizas para ahorrar energía? (Selecciona todas las que apliquen)
+                ¿Qué acciones realizas para ahorrar energía? (Selecciona todas
+                las que apliquen)
               </label>
               <div class="form-check">
                 <input
@@ -240,7 +264,8 @@
 
             <div class="mb-3">
               <label for="presupuesto" class="form-label">
-                ¿Cuánto dinero estás dispuesto a invertir en mejoras para ahorrar energía? (COP)
+                ¿Cuánto dinero estás dispuesto a invertir en mejoras para
+                ahorrar energía? (COP)
               </label>
               <input
                 type="number"
@@ -255,7 +280,8 @@
 
             <div class="mb-3">
               <label for="observaciones" class="form-label">
-                ¿Tienes algún comentario o sugerencia adicional sobre tus hábitos de consumo de energía?
+                ¿Tienes algún comentario o sugerencia adicional sobre tus
+                hábitos de consumo de energía?
               </label>
               <textarea
                 class="form-control"
@@ -269,8 +295,12 @@
 
           <!-- Botones -->
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button type="reset" class="btn btn-secondary btn-lg">Limpiar formulario</button>
-            <button type="submit" class="btn btn-primary btn-lg">Enviar encuesta</button>
+            <button type="reset" class="btn btn-secondary btn-lg">
+              Limpiar formulario
+            </button>
+            <button type="submit" class="btn btn-primary btn-lg">
+              Enviar encuesta
+            </button>
           </div>
         </form>
       </section>
@@ -278,14 +308,18 @@
       <section class="mt-5">
         <h2>¿Por qué esta encuesta?</h2>
         <p>
-          Entender los hábitos de consumo de energía de las familias es fundamental para identificar
-          oportunidades de ahorro. Con tus respuestas, podemos:
+          Entender los hábitos de consumo de energía de las familias es
+          fundamental para identificar oportunidades de ahorro. Con tus
+          respuestas, podemos:
         </p>
         <ul>
           <li>Identificar los momentos del día en que más energía consumes.</li>
           <li>Reconocer patrones de consumo que afectan tu factura.</li>
           <li>Proponer recomendaciones personalizadas de ahorro.</li>
-          <li>Entender la percepción de las familias sobre el consumo de energía en El Niño 2026.</li>
+          <li>
+            Entender la percepción de las familias sobre el consumo de energía
+            en El Niño 2026.
+          </li>
         </ul>
       </section>
     </main>
@@ -297,10 +331,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       // Script para actualizar el valor del range en tiempo real
-      const rangeInput = document.getElementById('tiempo-ducha');
-      const rangeValue = document.getElementById('valor-ducha');
+      const rangeInput = document.getElementById("tiempo-ducha");
+      const rangeValue = document.getElementById("valor-ducha");
 
-      rangeInput.addEventListener('input', function() {
+      rangeInput.addEventListener("input", function () {
         rangeValue.textContent = this.value;
       });
     </script>
